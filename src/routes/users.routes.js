@@ -26,7 +26,9 @@ function myMiddleware(request,response,next){
 const userController = new UserController();
 
 
-userRouters.post("/", myMiddleware, userController.create);
+/* userRouters.post("/", myMiddleware, userController.create); */
+
+userRouters.post("/", userController.create);
 
 
 /* userRouters.post("/", (request, response)=>{ */
